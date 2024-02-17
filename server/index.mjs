@@ -12,7 +12,7 @@ server.register(fastifyStatic, {
   root: path.join(__dirname, "../client"),
 });
 
-server.post("/", async (req) => {
+server.post("/", (req) => {
   const inputText = req.body;
 
   const arrayOfWords = inputText
